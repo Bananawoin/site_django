@@ -1,0 +1,16 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'app/style.css' %}">
+    </head>
+    <body>
+        <h1> ПРОДАЮ ДВУХ ПАРНЕЙ</h1>
+        <h4>
+            {% for item in items %}
+            <a href="{% url 'app:detail' item.id %}">
+           ID: {{item.id}} | Имя: {{item.name}} | Цена: {{item.price}} |Описание: {{item.description}} <br/>
+            </a>
+            {% endfor %}
+        </h4>
+    </body>
+</html>
