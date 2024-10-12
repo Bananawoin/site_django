@@ -1,10 +1,17 @@
 {% load static %}
-<html>
-    <head>
-        <link rel="stylesheet" href="{% static 'app/style.css' %}">
-    </head>
-    <body>
-        <h1> ПРОДАЮ ДВУХ ПАРНЕЙ</h1>
+
+        <nav>
+            <div>
+                <div>
+                    <div>
+                        <div class="flex">
+                            <img class="h-12 w-12" src="{% static 'app/images/balls.png' %}" alt="logo"/>
+                            <span class="text-3xl">Магазин Мальчиков Спальчиков</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <h4>
             {% for item in items %}
             <a href="{% url 'app:detail' item.id %}">
@@ -12,5 +19,3 @@
             </a>
             {% endfor %}
         </h4>
-    </body>
-</html>
